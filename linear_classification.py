@@ -35,3 +35,11 @@ plt.plot(r.history['accuracy'], label='accuracy')
 plt.plot(r.history['val_accuracy'], label='val_acc')
 plt.legend()
 
+P = model.predict(x_test)
+#print(P)
+
+import numpy as np
+P = np.round(P).flatten()
+print(P)
+
+model.evaluate(x_test, y_test)
