@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 import tensorflow as tf
 import matplotlib.pyplot as plt
@@ -42,4 +41,5 @@ import numpy as np
 P = np.round(P).flatten()
 print(P)
 
-model.evaluate(x_test, y_test)
+ev = model.evaluate(x_test, y_test)
+print('accuracy :'ev)
