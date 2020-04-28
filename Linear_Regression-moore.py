@@ -2,9 +2,10 @@ import tensorflow as tf
 import pandas as pd 
 import numpy as np 
 import matplotlib.pyplot as plt 
-# Get the data
-!wget https://raw.githubusercontent.com/lazyprogrammer/machine_learning_examples/master/tf2.0/moore.csv
+from urllib.request import urlretrieve
 
+url = 'https://raw.githubusercontent.com/lazyprogrammer/machine_learning_examples/master/tf2.0/moore.csv'
+urlretrieve(url, 'moore.csv')
 data = pd.read_csv('moore.csv', header=None).values
 X = data[:,0].reshape(-1, 1) # make it a 2-D array of size N x D where D = 1
 Y = data[:,1]
