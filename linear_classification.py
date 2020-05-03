@@ -6,8 +6,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 data = load_breast_cancer()
-data.data.shape
-data.target_names
+print('data.shape :', data.data.shape)
+print('target_names :', data.target_names)
 
 x_train, x_test, y_train, y_test = train_test_split(data.data, data.target, test_size = 0.25)
 N, D = x_train.shape
