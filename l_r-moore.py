@@ -39,4 +39,3 @@ Yhat = model.predict(X).flatten()
 plt.scatter(X, Y)
 plt.plot(X, Yhat, color = 'r')
 
-#perfect
